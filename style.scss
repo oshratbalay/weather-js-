@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("iphone-x-xr-xs-max-wallpaper-fond-ecran-degrade-bleu.png");
+}
+
+.container {
+    color: white;
+    margin-top: 60px;
+    
+    .current-info {
+        #cuntryCity {
+            font-size: 30px;
+        }
+        #time {
+            font-size: 70px;
+            span {
+                font-size: 25px;
+            }
+        }
+        #date {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .other {
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 320px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.384);
+            padding: 8px 5px;
+            border-radius: 5px;
+            border: white solid;
+            .weatherItem {
+                display: flex;
+                width: 150px;
+                justify-content: space-evenly;
+                align-content: space-around;
+            }
+        }
+    }
+}
+.futureForecast {
+    background-color: rgba(24, 24, 27, 0.61);
+    padding: 25px;
+    position: fixed;
+    color: white;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .weatherForecast {
+        display: flex;
+        .weatherForecastItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            border:  1px solid #eee;
+            border-radius:10px ;
+            padding: 15px;
+
+            .day {
+                padding: 5px 15px;
+                background-color: #3c3c44;
+                border-radius: 50px;
+                align-items: center;
+            }
+            .temp{
+                font-weight:100 ;
+            }
+        }
+    }
+
+    .today {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .day {
+            padding: 5px 15px;
+            background-color: #3c3c44;
+            border-radius: 50px;
+            align-items: center;
+        }
+        .temp {
+            font-size: 15px;
+            padding-top: 15px;
+        }
+    }
+}
+@media only screen and (max-width:730px){
+    .futureForecast{
+        justify-content: start;
+        align-items: none;
+        overflow-y:scroll ;
+
+    } 
+    .container{
+        margin-bottom: 182px;
+    }
+}
